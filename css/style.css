@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+body section {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 770px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+input {
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+header ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul li a {
+  color: black;
+  font-size: 14px;
+  padding: 35px 38px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+}
+
+header ul li a:hover {
+  color: #50649a;
+}
+
+h1 {
+  margin-top: 121px;
+  margin-bottom: 65px;
+  font-size: 70px;
+  text-align: center;
+  font-weight: 200;
+}
+
+.svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 51px;
+  text-align: center;
+}
+
+.input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input input, .input .nice-select {
+  letter-spacing: 1px;
+  padding-left: 9px;
+  width: 100%;
+  height: 60px;
+  font-size: 23px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 400;
+  border: solid 1px #e8e8e8;
+  border-radius: 3px;
+}
+
+.input input, .input .nice-select {
+  max-width: 520px;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
+  transition: -webkit-box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
+}
+
+.input input:focus, .input input:focus-visible, .input .nice-select:focus, .input .nice-select:focus-visible {
+  outline: 0 !important;
+  -webkit-box-shadow: 0 0 0 1px #4a5f97 !important;
+          box-shadow: 0 0 0 1px #4a5f97 !important;
+}
+
+.input .nice-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 321px;
+}
+
+.input .nice-select:after {
+  border-color: #4a5f97;
+  display: block;
+  height: 7px;
+  margin-top: -6px;
+  pointer-events: none;
+  position: absolute;
+  right: 21px;
+  top: 50%;
+  width: 7px;
+}
+
+.input .nice-select .nice-select-dropdown {
+  width: 100%;
+}
+
+.input .nice-select .nice-select-dropdown .option {
+  font-weight: 300;
+  color: #435993;
+  text-align: center;
+}
+
+.withTitle {
+  width: 100%;
+  max-width: 520px;
+  position: relative;
+}
+
+.withTitle .title {
+  top: 5px;
+  width: 100%;
+  height: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  font-size: 12px;
+  color: grey;
+}
+
+.formWrap {
+  margin-bottom: 48px;
+}
+
+.experience {
+  margin-bottom: 116px;
+}
+
+.experience .svg {
+  margin-bottom: 26px;
+}
+
+.experience .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.experience .checkbox .col {
+  width: 27.333333%;
+}
+
+.box {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 2px;
+  margin-bottom: 19px;
+  padding-left: 31px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.box .checkmark {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1px #435993;
+          box-shadow: 0 0 0px 1px #435993;
+  border-radius: 3px;
+}
+
+.box .checkmark:focus, .box .checkmark:focus-visible {
+  outline: #4a5f97  !important;
+}
+
+.box:hover input ~ .checkmark {
+  background-color: #e9efff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.box input:checked ~ .checkmark {
+  background: url("../img/check.png") center/13px 9px no-repeat, #435993;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.box:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.box .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.js {
+  margin-bottom: 73px;
+}
+
+.js .svg {
+  margin-bottom: 26px;
+}
+
+.js h2 {
+  margin-bottom: 96px;
+}
+
+.js .rs-container .rs-scale span::before {
+  display: none;
+}
+
+.js .rs-container .rs-scale span ins {
+  margin-left: 0 !important;
+  max-width: 180px;
+  white-space: break-spaces;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.js .rs-container .rs-scale span ins:after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 0;
+  bottom: -17px;
+  width: 5px;
+  height: 14px;
+  border-left: dotted 1px #d4d4d4;
+}
+
+.js .rs-container .rs-scale span:nth-child(2) {
+  left: -10px;
+  max-width: 175px;
+}
+
+.js .rs-container .rs-scale span:nth-child(3) {
+  left: 16px;
+  max-width: 200px;
+}
+
+.js .rs-container .rs-scale span:nth-child(4) {
+  visibility: hidden;
+}
+
+.js .rs-container .rs-scale span:last-child {
+  left: -110px;
+  width: 154px !important;
+}
+
+.js .rs-container .rs-scale span:last-child ins:after {
+  right: 21px;
+  left: auto;
+}
+
+.js .rs-container .rs-scale span:nth-last-child(-n+2) ins {
+  white-space: nowrap;
+  margin-left: -23px !important;
+}
+
+.js .rs-container .rs-scale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  top: -68px;
+}
+
+.js .rs-container .rs-selected {
+  background: linear-gradient(90deg, #ccb1f1 0px, #435993 770px);
+  border: none;
+}
+
+.js .rs-container .rs-selected:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 8px solid white;
+  border-right: 770px solid transparent;
+}
+
+.js .rs-container .rs-bg, .js .rs-container .rs-selected {
+  height: 11px;
+  border-radius: 0;
+}
+
+.js .rs-container .rs-pointer {
+  top: 19px;
+  width: 22px;
+  height: 25px;
+  background: url("../img/put.png") center/22px 25px;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.js .rs-container .rs-pointer::after, .js .rs-container .rs-pointer::before {
+  display: none;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  max-width: 507px;
+  margin-bottom: 60px;
+}
+
+.main .svg {
+  margin-bottom: 27px;
+}
+
+.main h2 {
+  margin-bottom: 16px;
+}
+
+.main span {
+  line-height: 23px;
+  margin-bottom: 38px;
+}
+
+.main textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 18px 15px 4px;
+  width: 100%;
+  font-size: 22px;
+  margin-bottom: 70px;
+  text-align: left;
+  font-weight: 400;
+  border: solid 1px #e8e8e8;
+  border-radius: 3px;
+}
+
+.main input[type="submit"] {
+  padding: 16px 34px 16px 31px;
+  font-size: 16px;
+  background: #435993;
+  color: #fff;
+  border-radius: 8px;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.main input[type="submit"]:hover {
+  color: #435993;
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 2px #435993;
+          box-shadow: 0 0 0 2px #435993;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 770px) {
+  body section {
+    max-width: 100%;
+  }
+  header ul li a {
+    padding: 35px 20px 30px;
+  }
+  h1 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  .js {
+    padding: 0 20px;
+  }
+  .experience .checkbox {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .js .rs-container .rs-scale {
+    top: -90px;
+  }
+}
+
+@media (max-width: 620px) {
+  .mobile {
+    margin-top: 10px;
+    display: block;
+  }
+  .mobile li {
+    margin-bottom: 5px;
+    line-height: 1.2;
+  }
+  .formWrap, .main {
+    padding: 0 20px;
+  }
+  .experience .checkbox .col {
+    width: 100%;
+  }
+  .js .rs-container .rs-scale {
+    top: -50px !important;
+    left: 0 !important;
+  }
+  .js .rs-container .rs-scale span:nth-child(4) {
+    visibility: visible;
+  }
+  .js .rs-container .rs-scale span ins {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .js .rs-container .rs-scale span:nth-child(2) {
+    left: 0;
+  }
+  .js .rs-container .rs-scale span:last-child {
+    left: 0 !important;
+    width: auto !important;
+  }
+  .js .rs-container .rs-scale span ins:after {
+    left: auto;
+    right: auto;
+  }
+  .js .rs-container .rs-scale span:last-child ins:after {
+    right: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  header ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header ul li a {
+    padding: 13px 20px 13px;
+  }
+  .js .rs-container .rs-scale {
+    top: -47px !important;
+  }
+  .js .rs-container .rs-scale span ins:after {
+    left: auto;
+    right: -5px;
+  }
+  .js .rs-container .rs-scale span:nth-child(3) ins:after {
+    visibility: hidden;
+  }
+}
+/*# sourceMappingURL=style.css.map */
