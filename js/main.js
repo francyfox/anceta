@@ -28,6 +28,7 @@ function years(tags, startY, endY, selected)
     }	
 }
 
+
 document.addEventListener( "DOMContentLoaded", function(){
     years('option', 1998, 2021, 1998);
     NiceSelect.bind(document.getElementById("date"));
@@ -42,32 +43,72 @@ document.addEventListener( "DOMContentLoaded", function(){
             }
         })
     });
-    
-    if (window.matchMedia("(max-width: 620px)").matches) {
-        const mySlider = new rSlider({
-            target: '#js_slider',
-            values: [
-                1, 2, 3, 4
-            ],
-            tooltip: false,
-            scale: true,
-            labels: true,
-            set: [3]
-        });
-    } else {
-        const mySlider = new rSlider({
-            target: '#js_slider',
-            values: [
-                'Не владею',
-                'Использую готовые решения' ,
-                'Использую готовые решения и умею и переделывать' ,
-                null ,
-                'Пишу сложный JS с нуля'
-            ],
-            tooltip: false,
-            scale: true,
-            labels: true,
-            set: ['Использую готовые решения и умею и переделывать']
-        });
+    const mQuery = window.matchMedia('(max-width: 620px)');
+    let mobileSlider = {
+        target: '#js_slider',
+        values: [
+            1, 2, 3, 4
+        ],
+        tooltip: false,
+        scale: true,
+        labels: true,
+        set: 2
     }
+
+    let desktopSlider = {
+        target: '#js_slider',
+        values: [
+            'Не владею',
+            'Использую готовые решения' ,
+            'Использую готовые решения и умею и переделывать' ,
+            null ,
+            'Пишу сложный JS с нуля'
+        ],
+        tooltip: false,
+        scale: true,
+        labels: true,
+        set: ['Использую готовые решения и умею и переделывать']
+    }
+
+    let mySlider = new rSlider(desktopSlider);
+
+    if (mQuery.matches) {
+        mySlider.destroy();
+        mySlider = new rSlider(mobileSlider);
+    }
+
+    function changeToMobile(e) {
+        if (e.matches) {
+            mySlider.destroy();
+            mySlider = new rSlider(mobileSlider);
+        } else {
+            mySlider.destroy();
+            mySlider = new rSlider(desktopSlider);
+        }
+    }
+
+    mQuery.addListener(changeToMobile);
+
+    const menu = new MmenuLight(
+        document.querySelector( "header nav" ), "(max-width: 620px)"
+    );
+
+    const navigator = menu.navigation();
+    const drawer = menu.offcanvas();
+
+    navigator.openPanel(
+        document.querySelector( "#menu" )
+    );
+
+    document.querySelector( 'a[href="#menu"]' )
+            .addEventListener( 'click', ( evnt ) => {
+                evnt.preventDefault();
+                drawer.open();
+    });
+
+    document.querySelector( 'a[href="#close"]' )
+        .addEventListener( 'click', ( evnt ) => {
+            evnt.preventDefault();
+            drawer.close();
+        });
 });
